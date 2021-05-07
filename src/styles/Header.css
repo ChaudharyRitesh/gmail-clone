@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid #c5c5c5; */
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left .icon {
+  margin-right: 1rem;
+}
+
+.header__left > img {
+  object-fit: contain;
+  height: 80px;
+  width: 100px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  flex: 0.7;
+  border-radius: 0.5rem;
+  background: whitesmoke;
+  padding: 1rem;
+}
+
+.header__search .MuiSvgIcon-root {
+  color: gray;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
+.header__search > input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.header__search > input::placeholder {
+  text-transform: capitalize;
+}
+
+.header__search .dropdown {
+  margin-right: -0.3rem;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  flex: 0.2;
+}
+
+.header__right .Avatar {
+  background: #ff8c00;
+}

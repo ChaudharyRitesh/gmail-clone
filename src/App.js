@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Mail from "./Components/Mail";
+import MailBox from "./Components/MailBox";
 import EmailList from "./Components/EmailList";
 import "./App.css";
 
@@ -17,7 +17,7 @@ function App() {
 
           <Switch>
             <Route path="/mail">
-              <Mail />
+              <MailBox />
             </Route>
             <Route path="/">
               <EmailList />

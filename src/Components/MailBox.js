@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Mail.css";
 
-function Mail() {
+function MailBox() {
   return (
     <div>
       <h3>Mail Box</h3>
@@ -9,4 +9,4 @@ function Mail() {
   );
 }
 
-export default Mail;
+export default MailBox;

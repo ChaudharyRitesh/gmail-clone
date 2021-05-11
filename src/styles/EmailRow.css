@@ -12,6 +12,12 @@
   box-shadow: 0px 2px 6px 0px rgba(197, 197, 197, 0.4);
 }
 
+.emailRow__link {
+  display: flex;
+  flex: 1;
+  padding-right: 15px;
+}
+
 .emailRow__options {
   display: flex;
 }
@@ -38,7 +44,7 @@
 
 .emailRow__time {
   padding-right: 15px;
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 600;
 }
 

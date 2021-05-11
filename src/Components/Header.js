@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/Header.css";
+import { useSelector, useDispatch } from "react-redux";
+import { selectUser, logout } from "../features/userSlice";
 import logo from "../assets/logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
@@ -10,8 +11,19 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
+import { auth } from "../firebase";
+import "../styles/Header.css";
 
 function Header() {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const signOut = () => {
+    console.log("logout");
+    auth.signOut().then(() => {
+      dispatch(logout());
+    });
+  };
+
   return (
     <>
       <div className="header">
@@ -37,7 +49,7 @@ function Header() {
             <AppsIcon />
           </IconButton>
           <IconButton>
-            <Avatar className="Avatar">R</Avatar>
+            <Avatar onClick={signOut} src={user?.photoURL} />
           </IconButton>
         </div>
       </div>
